@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Formulario de Recepcion de Solicitud de Tarjeta</title>
+    <meta charset="UTF-8">
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css}"/>
+    <style>
+        body {
+            background-color: #b3e0ff; /* Light blue background color */
+            margin: 20px;
+        }
+    </style>
+</head>
+<body style="margin: 20px;">
+    <div class="container">
+        <h1 class="text-center mt-5 mb-4">Datos de la solicitud</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="tipoDocumento">Tipo de Documento:</label>
+                <label th:text="${solicitud.tipoDocumento}" class="form-control" id="tipoDocumento"></label>
+            </div>
+            <div class="col-md-4">
+                <label for="numeroDocumento">Nº de Documento:</label>
+                <label th:text="${solicitud.numeroDocumento}" class="form-control" id="numeroDocumento"></label>
+            </div>
+            <div class="col-md-4">
+                <label for="apellidoPaterno">Apellido Paterno:</label>
+                <label th:text="${solicitud.apellidoPaterno}" class="form-control" id="apellidoPaterno"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="apellidoMaterno">Apellido Materno:</label>
+                <label th:text="${solicitud.apellidoMaterno}" class="form-control" id="apellidoMaterno"></label>
+            </div>
+            <div class="col-md-4">
+                <label for="nombres">Nombres:</label>
+                <label th:text="${solicitud.nombres}" class="form-control" id="nombres"></label>
+            </div>
+            <div class="col-md-4">
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <label th:text="${solicitud.fechaNacimiento}" class="form-control" id="fechaNacimiento"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="sexo">Sexo:</label>
+                <label th:text="${solicitud.sexo}" class="form-control" id="sexo"></label>
+            </div>
+            <div class="col-md-4">
+                <label for="estadoCivil">Estado Civil:</label>
+                <label th:text="${solicitud.estadoCivil}" class="form-control" id="estadoCivil"></label>
+            </div>
+            <div class="col-md-4">
+                <label for="situacionLaboral">Situación Laboral:</label>
+                <label th:text="${solicitud.situacionLaboral}" class="form-control" id="situacionLaboral"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="rucEmpleador">RUC del Empleador:</label>
+                <label th:text="${solicitud.rucEmpleador}" class="form-control" id="rucEmpleador"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="aceptarTerminos">Aceptar Términos y Condiciones:</label>
+                <label th:text="${solicitud.aceptarTerminos}" class="form-control" id="aceptarTerminos"></label>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <a href="/solicitudRegistro" class="btn btn-primary">Realizar nueva Solicitud</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
